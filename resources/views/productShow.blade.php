@@ -12,16 +12,15 @@
 <body>
 
 <<div class="container-fluid">
- <center> <h2>Employee Table</h2></center>   
+ <center> <h2>Product Table</h2></center>   
   <table class="table bg-primary text-white">
     <thead class="text-light bg-dark">
       <tr>
         <th>ID</th>
         <th>IMAGE</th>
         <th>NAME</th>
-        <th>EMAIL</th>
-        <th>MOBILE</th>
-        <th>ADDRESS</th>
+        <th>PRICE</th>
+        <th>DESCRIPTIONS</th>>
         <th>UPDATE</th>
         <th>DELETE</th>
       </tr>
@@ -30,15 +29,10 @@
     @foreach($results as $data)
       <tr>
         <td>{{ $data['id'] }}</td>
-        <td> <img src='<?php echo "/storage/".str_replace('public/','',$data['image']); ?>'
-         style="border: 1px solid #ddd; border-radius: 6px;
-          max-width: 350px; width: 120px; height: 120px; 
-          overflow: hidden; border-radius: 100%; 
-          margin: -10px auto 0; object-fit: cover;" /></td>
+        <td>{{ $data['image'] }}</td>
         <td>{{ $data['name'] }}</td>
-        <td>{{ $data['email'] }}</td>
-        <td>{{ $data['mobile'] }}</td>
-        <td>{{ $data['address'] }}</td>
+        <td>{{ $data['price'] }}</td>
+        <td>{{ $data['description'] }}</td>
         <td>
         <form  action="">
         @csrf
@@ -46,7 +40,7 @@
         </form>
         </td>
         <td>
-        <a href="employee/delete/{{ $data['id'] }}">
+        <a href="">
         <button class="btn btn-dark btn-sm ">Delete</button>
         </a>
         </td>
@@ -55,7 +49,7 @@
     @endforeach
     </tbody>
   </table>
-        <a href="/employee"><button class="btn btn-dark btn-md btn pull-right">Add New Employee</button></a>
+        <a href="/product"><button class="btn btn-dark btn-md btn pull-right">Add New product</button></a>
 </div>
 </body>
 </html>

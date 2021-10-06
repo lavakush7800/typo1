@@ -13,7 +13,7 @@
 
 <div class="container">
   <h2>LS Product</h2>
-  <form method="post" action="/save">
+  <form method="post" action="/save" enctype="multipart/form-data">
       @csrf
     <div class="form-group">
       <label for="image">Image:</label>
