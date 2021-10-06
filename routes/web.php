@@ -21,3 +21,15 @@ Route::get('/', function () {
 Route::get('/product', [ProductController::class, 'index']);
 Route::post('/save', [ProductController::class, 'store']);
 Route::get('/productShow', [ProductController::class, 'show']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
