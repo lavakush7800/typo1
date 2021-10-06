@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>LS Product</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,15 +12,23 @@
 <body>
 
 <div class="container">
-  <h2>Stacked form</h2>
-  <form action="/action_page.php">
+  <h2>LS Product</h2>
+  <form method="post" action="save">
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="image">Image:</label>
+      <input type="file" class="form-control" id="image" placeholder="Enter image" name="image">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <label for="name">Product Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="pswd">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
+    </div>
+    <div class="form-group">
+      <label for="description">Descriptions:</label>
+      <input type="textarea" class="form-control" id="description" placeholder="Enter description" name="description">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
