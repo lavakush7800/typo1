@@ -21,4 +21,12 @@ class ProductController extends Controller
 
         }
     }
+    public function show(){
+        try{
+            $results = Product::show();
+            return view('productShow', compact('results'));
+        }catch(\Exception $e){
+
+        }
+    }
 }
