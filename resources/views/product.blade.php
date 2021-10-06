@@ -16,19 +16,19 @@
   <form method="post" action="save">
     <div class="form-group">
       <label for="image">Image:</label>
-      <input type="file" class="form-control" id="image" placeholder="Enter image" name="image">
+      <input type="file" class="form-control" id="image" placeholder="" name="image">
     </div>
     <div class="form-group">
       <label for="name">Product Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="pswd">
+      <input type="text" class="form-control" id="name" placeholder="" name="name">
     </div>
     <div class="form-group">
       <label for="price">Price:</label>
-      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price">
+      <input type="text" class="form-control" id="price" placeholder="" name="price">
     </div>
     <div class="form-group">
       <label for="description">Descriptions:</label>
-      <input type="textarea" class="form-control" id="description" placeholder="Enter description" name="description">
+      <textarea type="textarea" class="form-control" id="description" placeholder="" name="description"></textarea>
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
