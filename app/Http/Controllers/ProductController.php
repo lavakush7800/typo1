@@ -14,7 +14,9 @@ class ProductController extends Controller
     public function store(Request $request){
         try{
             $data = $request->all();
-            // dd($data);
+            $fname = $request->image->store('/public');
+            // dd($fname);
+            $data['image'] =$fname;
             $result = Product::get($data);
             // return redirect('product');
         }catch(\Exception $e){
