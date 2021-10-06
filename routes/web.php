@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/product', [ProductController::class, 'index']);
+Route::post('/save', [ProductController::class, 'store']);

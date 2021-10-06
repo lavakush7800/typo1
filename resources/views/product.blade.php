@@ -13,7 +13,8 @@
 
 <div class="container">
   <h2>LS Product</h2>
-  <form method="post" action="save">
+  <form method="post" action="/save">
+      @csrf
     <div class="form-group">
       <label for="image">Image:</label>
       <input type="file" class="form-control" id="image" placeholder="" name="image">
@@ -28,7 +29,8 @@
     </div>
     <div class="form-group">
       <label for="description">Descriptions:</label>
-      <textarea type="textarea" class="form-control" id="description" placeholder="" name="description"></textarea>
+      <!-- <textarea type="textarea" class="form-control" id="description" placeholder="" name="description"></textarea> -->
+      <input type="text" class="form-control" id="description" placeholder="" name="description">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
