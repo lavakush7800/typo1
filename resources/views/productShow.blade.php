@@ -10,46 +10,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<<div class="container-fluid">
- <center> <h2>Product Table</h2></center>   
-  <table class="table bg-primary text-white">
-    <thead class="text-light bg-dark">
-      <tr>
-        <th>ID</th>
-        <th>IMAGE</th>
-        <th>NAME</th>
-        <th>PRICE</th>
-        <th>DESCRIPTIONS</th>>
-        <th>UPDATE</th>
-        <th>DELETE</th>
-      </tr>
-    </thead>
-    <tbody>
-    @foreach($results as $data)
-      <tr>
-        <td>{{ $data['id'] }}</td>
-        <td><img src='<?php echo "/storage/".str_replace('public/','',$data['image']); ?>' width="80" /></td>
-        <td>{{ $data['name'] }}</td>
-        <td>{{ $data['price'] }}</td>
-        <td>{{ $data['description'] }}</td>
-        <td>
-        <form  action="">
-        @csrf
-        <button class="btn btn-dark btn-sm">Edit</button>
-        </form>
-        </td>
-        <td>
-        <a href="">
-        <button class="btn btn-dark btn-sm ">Delete</button>
-        </a>
-        </td>
-
-      </tr>
-    @endforeach
-    </tbody>
-  </table>
-        <a href="/product"><button class="btn btn-dark btn-md btn pull-right">Add New product</button></a>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+  @foreach($results as $item)
+      <div class="{{$item['id']==1?'active':''}}">
+          <img src="<?php echo "/storage/".str_replace('public/','',$item['image']); ?>" alt="Lav">
+      </div>
+      @endforeach
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 </body>
 </html>
