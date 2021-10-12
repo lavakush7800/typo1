@@ -9,4 +9,10 @@ class ClientsController extends Controller
     public function index(){
         return view('client');
     }
+
+    public function store(Request $request){
+        try{}catch(){
+            
+        }
+    }
 }
