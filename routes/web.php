@@ -23,6 +23,10 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::post('/save', [ProductController::class, 'store']);
 Route::get('/productShow', [ProductController::class, 'show']);
 
+
+Route::get('/client', [ClientsController::class, 'index']);
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
