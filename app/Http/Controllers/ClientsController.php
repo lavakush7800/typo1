@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Lib\Crud\Client;
+use Illuminate\Http\Request;
+
 
 class ClientsController extends Controller
 {
@@ -14,6 +15,7 @@ class ClientsController extends Controller
     public function store(Request $request){
         try{
             $data = $request->all();
+            // dd($data);
             $result = Client::get($data);
             // return redirect('client');
         }catch(\Exception $e){
