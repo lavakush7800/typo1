@@ -25,6 +25,8 @@ Route::get('/productShow', [ProductController::class, 'show']);
 
 
 Route::get('/client', [ClientsController::class, 'index']);
+Route::post('/clients-data', [ClientsController::class, 'store']);
+
 
 
 Auth::routes();
