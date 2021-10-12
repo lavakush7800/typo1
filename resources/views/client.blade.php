@@ -17,7 +17,7 @@
       <label for="address">Address:</label>
       <input type="text" class="form-control" id="address" placeholder="" name="address">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-dark btn-block">Submit</button>
   </form>
 </div>
 @endsection
