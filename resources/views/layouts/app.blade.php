@@ -44,6 +44,12 @@
                         <li>
                             <a class="nav-link" href="/productShow">{{ __('Product') }}</a>
                         </li>
+                        <li>
+                            <a class="nav-link" href="/client">{{ __('Add Clients') }}</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="/clientShow">{{ __('Clients') }}</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
