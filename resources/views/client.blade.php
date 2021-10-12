@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <h2>LS Product</h2>
+  <h2>Add Clients</h2>
   <form method="post" action="/clents-data">
       @csrf
     <div class="form-group">
