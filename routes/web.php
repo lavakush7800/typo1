@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ClientsController;
+// use App\Http\Controllers\ClientsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +24,8 @@ Route::post('/save', [ProductController::class, 'store']);
 Route::get('/productShow', [ProductController::class, 'show']);
 
 
-Route::get('/client', [ClientsController::class, 'index']);
-Route::post('/clients-data', [ClientsController::class, 'store']);
+// Route::get('/client', [ClientsController::class, 'index']);
+// Route::post('/clients-data', [ClientsController::class, 'store']);
 
 
 

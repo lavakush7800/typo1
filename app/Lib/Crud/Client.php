@@ -9,13 +9,13 @@ class Client{
         try{
             // dd($data);
             $result = Model::create($data);
-            return $result;
-            // dd($result);
-            // if($result){
-            //     return $result->toArray();
-            // }else{
-            //     return [];
-            // }
+            // return $result;
+            dd($result);
+            if($result){
+                return $result->toArray();
+            }else{
+                return [];
+            }
         }catch(\Exception $e){
             Log::error($e);
         }
