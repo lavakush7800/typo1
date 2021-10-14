@@ -10,7 +10,7 @@ class Client{
             // dd($data);
             $result = Model::create($data);
             // return $result;
-            dd($result);
+            // dd($result);
             if($result){
                 return $result->toArray();
             }else{
